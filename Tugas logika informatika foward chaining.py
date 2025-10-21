@@ -1,5 +1,3 @@
-# ======== Forward Chaining untuk Diagnosis Komputer ========
-
 rules = [
     (["komputer_tidak_nyala", "tombol_power_berfungsi"], "cek_suplai_daya"),
     (["cek_suplai_daya", "kabel_terpasang_baik"], "kemungkinan_psu_rusak"),
@@ -21,7 +19,7 @@ facts = {
 }
 
 def forward_chaining(rules, facts):
-    inferred = set()
+    inferred = set( )
     new_fact_added = True
 
     while new_fact_added:
