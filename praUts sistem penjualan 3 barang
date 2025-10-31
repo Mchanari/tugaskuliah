@@ -1,0 +1,38 @@
+print("===========================================================")
+print(" Daftar Menu Makanan Cafe IM_824")
+print("===========================================================")
+print("1. Hamburger         Rp 15000")
+print("2. Cheeseburger      Rp 20000")
+print("3. Kentang goreng    Rp 10000")
+print("-------------------------------------")
+
+# Input dari pembeli
+pilihan = int(input("Masukkan Pesanan Anda [1/2/3] : "))
+
+# proses percabangan if
+if pilihan == 1:
+    nama = "Hamburger"
+    harga = 15000
+elif pilihan == 2:
+    nama = "Cheeseburger"
+    harga = 20000
+elif pilihan == 3:
+    nama = "Kentang goreng"
+    harga = 10000
+else:
+    print("Pilihan tidak ada di menu!")
+    exit()
+
+print("\nAnda memilih :", nama)
+print("Harga :", harga)
+
+# input uang dari pembeli
+uang = int(input("Masukkan uang dari pembeli: Rp "))
+
+# Mengecek keuangan
+if uang < harga:
+    print("Maaf, uang anda tidak cukup, transaksi dibatalkan.")
+else:
+    kembalian = uang - harga
+    print("Kembalian anda : Rp", kembalian)
+    print("\nTerima kasih sudah membeli di Cafe IM_824")
