@@ -27,8 +27,9 @@ maksimun = max(semua_elemen)
 minimun = min(semua_elemen)
 rata_rata = jumlah / len(semua_elemen)
 
-# Menampilkan hasilnya
+# Hasil
 print(f"Jumlah semua elemen : {jumlah}")
 print(f"Nilai maksimun      : {maksimun}")
 print(f"Nilai minimun       : {minimun}")
+
 print(f"Nilai rata rata     : {rata_rata:.2f}")
