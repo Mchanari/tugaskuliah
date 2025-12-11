@@ -36,6 +36,7 @@ int main()
             cout << "3. Karakter" << endl;
             cout << "4. Waktu" << endl;
             cout << "5. Boolean" << endl;
+            cout << "6. Kembali kemenu utama" << endl;
             cout << "Pilihan: " << endl;
             cin >> jenis;
 
@@ -91,10 +92,29 @@ int main()
             }
             else if (jenis == 3)
             {
-                char c;
-                cout << "Masukan Karakter: ";
-                cin >> c;
-                cout << "Karakter anda: " << c << endl;
+                // Karakter atau String
+            int pilihK;
+                cout << "1. Masukan Char" << endl;
+                cout << "2. Masukan String" << endl;
+                cout << "3. Kembali ke Menu Utama" << endl;
+                cin>>pilihK;
+
+                if(pilihK == 1) {
+                    char c;
+                    cout << "Masukan karakter: ";
+                    cin >> c;
+                    cout << "Karakter = " << c << endl;
+                }
+                else if(pilihK == 2) {
+                    char s[100];
+                    cout << "Masukan String: ";
+                    cin >> s;
+                    cout << "String = " << s << endl;
+                }
+                else if(pilihK == 3)
+                {
+                    continue;
+                }
             }
             else if (jenis == 4)
             {
@@ -115,12 +135,12 @@ int main()
                 time_t now = time(0);
                 tm *ltm = localtime(&now);
 
-                if (jw == 1)
+                if (jw == 1)                              
                 {
                     cout << "\nTanggal hari ini: ";
-                    cout << ltm->tm_mday << "-"
-                         << 1 + ltm->tm_mon << "-"
-                         << 1900 + ltm->tm_year << endl;
+                    cout << ltm->tm_mday << "-"                     // Tanggal
+                         << 1 + ltm->tm_mon << "-"                  // Bulan (ditambah 1)
+                         << 1900 + ltm->tm_year << endl;            // Tahun (ditambah 1900)
                 }
                 else if (jw == 2)
                 {
@@ -157,6 +177,10 @@ int main()
                     cout << "FALSE" << endl;
                 else cout << "Bukan Boolean!" << endl;
             }
+            else if (jenis == 6)
+            {
+                continue;
+            }
         cout << "==================================================" << endl;
         system("pause");    
         }
@@ -175,6 +199,7 @@ int main()
         cout << "3. If Else If Else" << endl;
         cout << "4. Swtich-Case" << endl;
         cout << "5. Ternary" << endl;
+        cout << "6. Kembali ke Menu Utama." << endl;
         cout << "Masukan pilihan: ";
         cin >> jenis;
 
@@ -267,8 +292,12 @@ int main()
             string status = (nilai >= 75) ? "LULUS" : "TIDAK LULUS";
             cout << "Status anda adalah: " << status << endl;
         }
+        else if (jenis == 6)
+        {
+            continue;
+        }
 
-        cout << "===========================================" << endl;
+        cout <<  endl;
         system("pause");
     }
 
@@ -284,10 +313,15 @@ int main()
         cout << "1. FOR" << endl;
         cout << "2. WHILE" << endl;
         cout << "3. DO WHILE" << endl;
+        cout << "4. Kembali ke Menu Utama" << endl;
         cin >> jenis;
-        cout << "Ceta angka 1 sampai: ";
+        
+        if (jenis == 4)
+        {
+            continue;
+        }
+        cout << "Cetak angka 1 sampai: ";
         cin >> n;
-
         if (jenis == 1)
         {
             for (int i = 1; i <= n; i++)
@@ -308,7 +342,7 @@ int main()
             } while (i <= n);
         }
 
-        cout << "==============================================" << endl;
+        cout << endl;
         system("pause");
     }
     else if (pilihan == 4)
@@ -320,7 +354,9 @@ int main()
         cout << "=============================================" << endl;
 
         int jenis;
-        cout << "1. Array 1D\n2. Array 2D\npilih: ";
+        cout << "1. Array 1D" << endl;
+        cout << "2. Array 2D" << endl;
+        cout << "3. Kembali ke Menu Utama" << endl;
         cin >> jenis;
 
         if (jenis == 1)
@@ -366,6 +402,10 @@ int main()
                     cout << arr[i][j] << " ";
                 cout << endl;
             }
+        }
+        else if (jenis == 3)
+        {
+            continue;
         }
 
         cout << "===============================================" << endl;
