@@ -157,8 +157,8 @@
                         cout << "\nTanggal hari ini: ";
                         cout << ltm->tm_mday << "-"                     // Tanggal
                             << 1 + ltm->tm_mon << "-"                  // Bulan (ditambah 1)
-                            << 1900 + ltm->tm_year << endl;            // Tahun (ditambah 1900)
-                    }
+                            << 1900  + ltm->tm_year << endl;            // Tahun (ditambah 1900)
+                    }   
                     else if (jw == 2)
                     {
                         cout << "\nWaktu saat ini: ";
@@ -332,23 +332,25 @@
             cout << "3. DO WHILE" << endl;
             cout << "4. Kembali ke Menu Utama" << endl;
             cin >> jenis;
-            
+
             if (jenis == 4)
             {
                 continue;
             }
+            
             cout << "Cetak angka 1 sampai: ";
             cin >> n;
+            
             if (jenis == 1)
             {
                 for (int i = 1; i <= n; i++)
-                    cout << i << " ";
+                cout << i << " ";
             }
             else if (jenis == 2)
             {
                 int i = 1;
                 while (i <= n)
-                    cout << i++ << " ";
+                cout << i++ << " ";
             }
             else if (jenis == 3)
             {
@@ -358,7 +360,7 @@
                     cout << i++ << " ";
                 } while (i <= n);
             }
-
+            
             cout << endl;
             system("pause");
         }
