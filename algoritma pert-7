@@ -1,0 +1,19 @@
+# Harga awal
+harga_awal = 100000
+
+# Jika harga lebih dari atau sama dengan 75000, dapat diskon
+if harga_awal >= 75000:
+    print("Selamat! Anda dapat diskon.")
+    
+    # Harga setelah diskon
+    harga_setelah_diskon = 75000
+    
+    # Hitung persentase diskon
+    potongan = harga_awal - harga_setelah_diskon
+    persentase_diskon = (potongan / harga_awal) * 100
+    
+    print(f"Harga awal: Rp{harga_awal}")
+    print(f"Harga setelah diskon: Rp{harga_setelah_diskon}")
+    print(f"Diskon yang didapat: {persentase_diskon:.0f}%")
+else:
+    print("Maaf, belum memenuhi syarat diskon.")
